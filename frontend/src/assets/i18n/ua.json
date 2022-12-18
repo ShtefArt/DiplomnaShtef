@@ -1,0 +1,40 @@
+{
+    "login": "Логін",
+    "email": "Електронна адреса",
+    "signup": "Зареєструватись",
+    "signupFaild": "Реєстрація не вдалась!",
+    "logout": "Вийти",
+    "edit": "Редагувати",
+    "delete": "Видалити",
+    "eventSchedule": "Event Board",
+    "events": "Події",
+    "modBoard": "Налаштування подій",
+    "adminBoard": "Адмін сторінка",
+    "loginPage": {
+        "username": "Ім'я",
+        "password": "Пароль",
+        "email": "Електронна адреса",
+        "usernameRequired": "Ім'я необхідне!",
+        "usernameMax": "Ім'я повинно бути не більше 20 символів!",
+        "usernameLess": "Ім'я повинно бути не менше 3 символів!",
+        "emailRequired": "Електронна адреса необхідна!",
+        "emailWarn": "Електронна адреса має бути корректною!",
+        "passRequired": "Пароль необхідний!",
+        "passLenghtWarn": "Пароль має містити мінімум 6 символів",
+        "loginFaild": "Вхід не вдався невірно вказані дані",
+        "loginSuccses": "Увійшли як ",
+        "registSuccses": "Регістрація пройшла успішно "
+    },
+    "profilePage": {
+        "profile": "Профіль",
+        "email": "Електронна пошта",
+        "roles": "Ролі",
+        "pleaseLogin": "Будь ласка увійдіть"
+    },
+    "boardModerator": {
+        "tittle": "Назва",
+        "description": "Опис"
+    },
+    "save": "Зберегти",
+    "cancel": "Відміна"
+}

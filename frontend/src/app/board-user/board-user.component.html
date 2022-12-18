@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <div class="row">
+    <div id="map" class="full col-md-7">
+
+    </div>
+    <div class="full col-md-5">
+      <div *ngFor="let event of events" class="card mb-2">
+        <div class="card-header">
+          <div class="d-flex justify-content-between">
+            <div (click)="goToMarker(event)">
+              {{ event.title }}
+            </div>
+            <div>
+              <i *ngIf="isModerator()" class="bi bi-pencil" data-toggle="tooltip" title="{{ 'edit' | translate }}" (click)="editEvent(event)"></i>
+              <i *ngIf="isModerator()" class="bi bi-trash ml-3" data-toggle="tooltip" title="{{ 'delete' | translate }}" (click)="deleteEvent(event)"></i>
+            </div>
+          </div>
+        </div>
+        <div class="card-body" (click)="goToMarker(event)">
+          <p class="card-text"> {{ event.description }} </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

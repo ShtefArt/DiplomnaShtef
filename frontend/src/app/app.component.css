@@ -1,0 +1,17 @@
+.vr {
+    border-left: 1px solid white;
+    height: 14px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+     transform: translateY(-50%);
+}
+
+.nav-link {
+    cursor: pointer;
+}
+
+.lang {
+    color: white !important;
+}

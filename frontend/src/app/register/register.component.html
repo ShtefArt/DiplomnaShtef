@@ -1,0 +1,86 @@
+<div class="col-md-12">
+  <div class="card card-container">
+    <img
+      id="profile-img"
+      src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
+      class="profile-img-card"
+    />
+    <form
+      *ngIf="!isSuccessful"
+      name="form"
+      (ngSubmit)="f.form.valid && onSubmit()"
+      #f="ngForm"
+      novalidate
+    >
+      <div class="form-group">
+        <label for="username">{{ 'loginPage.username' | translate }}</label>
+        <input
+          type="text"
+          class="form-control"
+          name="username"
+          [(ngModel)]="form.username"
+          required
+          minlength="3"
+          maxlength="20"
+          #username="ngModel"
+        />
+        <div class="alert-danger" *ngIf="username.errors && f.submitted">
+          <div class="mt-2 pr-1 pl-1" *ngIf="username.errors.required">{{ 'loginPage.usernameRequired' | translate }}</div>
+          <div class="mt-2 pr-1 pl-1" *ngIf="username.errors.minlength">
+            {{ 'loginPage.usernameLess' | translate }}
+          </div>
+          <div class="mt-2 pr-1 pl-1" *ngIf="username.errors.maxlength">
+            {{ 'loginPage.usernameMax' | translate }}
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">{{ 'email' | translate }}</label>
+        <input
+          type="email"
+          class="form-control"
+          name="email"
+          [(ngModel)]="form.email"
+          required
+          email
+          #email="ngModel"
+        />
+        <div class="alert-danger" *ngIf="email.errors && f.submitted">
+          <div class="mt-2 pr-1 pl-1" *ngIf="email.errors.required">{{ 'loginPage.emailRequired' | translate }}</div>
+          <div class="mt-2 pr-1 pl-1" *ngIf="email.errors.email">
+            {{ 'loginPage.emailWarn' | translate }}
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="password">{{ 'loginPage.password' | translate }}</label>
+        <input
+          type="password"
+          class="form-control"
+          name="password"
+          [(ngModel)]="form.password"
+          required
+          minlength="6"
+          #password="ngModel"
+        />
+        <div class="alert-danger" *ngIf="password.errors && f.submitted">
+          <div class="mt-2 pr-1 pl-1" *ngIf="password.errors.required">{{ 'loginPage.passRequired' | translate }}</div>
+          <div class="mt-2 pr-1 pl-1" *ngIf="password.errors.minlength">
+            {{ 'loginPage.passLenghtWarn' | translate }}
+          </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <button class="btn btn-primary btn-block">{{ 'signup' | translate }}</button>
+      </div>
+
+      <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
+        {{ 'signupFaild' | translate }}<br />{{ errorMessage }}
+      </div>
+    </form>
+
+    <div class="alert alert-success" *ngIf="isSuccessful">
+      {{ 'loginPage.registSuccses' | translate }}
+    </div>
+  </div>
+</div>

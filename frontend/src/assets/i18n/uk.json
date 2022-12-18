@@ -1,0 +1,38 @@
+{
+    "login": "Login",
+    "signup": "Sign Up",
+    "email": "Email",
+    "signupFaild": "Sign Up faild!",
+    "logout": "Log Out",
+    "edit": "Edit",
+    "delete": "Delete",
+    "eventSchedule": "Event Board",
+    "events": "Events",
+    "modBoard": "Moderator Board",
+    "adminBoard": "Admin Board",
+    "loginPage": {
+        "username": "Username",
+        "password": "Password",
+        "usernameMax": "Username should be less then 20 symbols!",
+        "usernameLess": "Username should be more then 3 symbols!",
+        "emailRequired": "Email required!",
+        "emailWarn": "Email should be correct!",
+        "usernameRequired": "Username is required!",
+        "passRequired": "Password is required!",
+        "passLenghtWarn": "Password must be at least 6 characters",
+        "loginFaild": "Login faild ",
+        "loginSuccses": "Logged in as "
+    },
+    "profilePage": {
+        "profile": "profile",
+        "email": "Email",
+        "roles": "Roles",
+        "pleaseLogin": "Please Login"
+    },
+    "boardModerator": {
+        "tittle": "Tittle",
+        "description": "Description"
+    },
+    "save": "Save",
+    "cancel": "Cancel"
+}
